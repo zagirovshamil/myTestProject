@@ -1,50 +1,33 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Тестовое задание на React + TypeScript
 
-Currently, two official plugins are available:
+Этот проект представляет собой тестовое задание, разработанное с использованием **React** и **TypeScript**. В проекте реализованы запросы к API с помощью библиотеки **React Query** и **Axios**, стилизация выполнена с использованием **Material-UI (MUI)**, а для отображения видео используется библиотека **React Player**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Основные технологии и библиотеки
 
-## Expanding the ESLint configuration
+- **React**: Основная библиотека для построения пользовательского интерфейса.
+- **TypeScript**: Используется для добавления статической типизации в JavaScript.
+- **React Query**: Библиотека для управления состоянием и запросами данных.
+- **Axios**: HTTP-клиент для выполнения запросов к API.
+- **Material-UI (MUI)**: Библиотека компонентов для быстрой и легкой стилизации.
+- **React Player**: Библиотека для отображения видеоплееров.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Установка и запуск проекта
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. **Клонируйте репозиторий:**
+   ```bash
+   git clone [https://github.com/zagirovshamil/myTestProject.git]
+   cd myTestProject
+   ```
+   
+2. **Установите зависимости:**
+   ```bash
+   npm install
+   ```
+3. **Запустите проект:**
+   ```bash
+   npm start
+   ```
+Если у вас есть вопросы или предложения, пожалуйста, свяжитесь со мной по адресу zagirovshamil@gmail.com.
+   
