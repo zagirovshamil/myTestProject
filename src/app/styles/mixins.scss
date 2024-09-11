@@ -1,0 +1,161 @@
+@use "./globals";
+
+$xxl: 1259px;
+$xl: 1023px;
+$l: 767px;
+$m: 640px;
+$s: 474px;
+$xs: 320px;
+
+@mixin media-min-width($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin media-max-width($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin max-width($width) {
+  max-width: $width;
+  width: 100%;
+}
+
+@mixin trans($what, $dur: 0.15s, $easing: ease) {
+  transition: $what $dur $easing;
+}
+
+@mixin nl {
+  &:not(:last-child) {
+    @content;
+  }
+}
+
+@mixin nf {
+  &:not(:first-child) {
+    @content;
+  }
+}
+
+@mixin media-xxl {
+  @media only screen and (max-width: #{$xxl}) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media only screen and (max-width: #{$xl}) {
+    @content;
+  }
+}
+
+@mixin media-l {
+  @media only screen and (max-width: #{$l}) {
+    @content;
+  }
+}
+
+@mixin media-m {
+  @media only screen and (max-width: #{$m}) {
+    @content;
+  }
+}
+
+@mixin media-s {
+  @media only screen and (max-width: #{$s}) {
+    @content;
+  }
+}
+
+@mixin media-xs {
+  @media only screen and (max-width: #{$xs}) {
+    @content;
+  }
+}
+
+@mixin h1 {
+  font-size: globals.$font-size-h1;
+  font-weight: globals.$font-weight-h1;
+  line-height: globals.$font-line-height-h1;
+  letter-spacing: globals.$font-letter-spacing-h1;
+}
+
+@mixin h2 {
+  font-size: globals.$font-size-h2;
+  font-weight: globals.$font-weight-h2;
+  line-height: globals.$font-line-height-h2;
+  letter-spacing: globals.$font-letter-spacing-h2;
+}
+
+@mixin h3 {
+  font-size: globals.$font-size-h3;
+  font-weight: globals.$font-weight-h3;
+  line-height: globals.$font-line-height-h3;
+  letter-spacing: globals.$font-letter-spacing-h3;
+}
+
+@mixin h4 {
+  font-size: globals.$font-size-h4;
+  font-weight: globals.$font-weight-h4;
+  line-height: globals.$font-line-height-h4;
+  letter-spacing: globals.$font-letter-spacing-h4;
+}
+
+@mixin h5 {
+  font-size: globals.$font-size-h5;
+  font-weight: globals.$font-weight-h5;
+  line-height: globals.$font-line-height-h5;
+  letter-spacing: globals.$font-letter-spacing-h5;
+}
+
+@mixin h6 {
+  font-size: globals.$font-size-h6;
+  font-weight: globals.$font-weight-h6;
+  line-height: globals.$font-line-height-h6;
+  letter-spacing: globals.$font-letter-spacing-h6;
+}
+
+@mixin subtitle1 {
+  font-size: globals.$font-size-subtitle1;
+  font-weight: globals.$font-weight-subtitle1;
+  line-height: globals.$font-line-height-subtitle1;
+  letter-spacing: globals.$font-letter-spacing-subtitle1;
+}
+
+@mixin subtitle2 {
+  font-size: globals.$font-size-subtitle2;
+  font-weight: globals.$font-weight-subtitle2;
+  line-height: globals.$font-line-height-subtitle2;
+  letter-spacing: globals.$font-letter-spacing-subtitle2;
+}
+
+@mixin subtitle3 {
+  font-size: globals.$font-size-subtitle3;
+  font-weight: globals.$font-weight-subtitle3;
+  line-height: globals.$font-line-height-subtitle3;
+  letter-spacing: globals.$font-letter-spacing-subtitle3;
+}
+
+@mixin body1 {
+  font-size: globals.$font-size-body1;
+  font-weight: globals.$font-weight-body1;
+  line-height: globals.$font-line-height-body1;
+  letter-spacing: globals.$font-letter-spacing-body1;
+}
+
+@mixin body2 {
+  font-size: globals.$font-size-body2;
+  font-weight: globals.$font-weight-body2;
+  line-height: globals.$font-line-height-body2;
+  letter-spacing: globals.$font-letter-spacing-body2;
+}
+
+@mixin body3 {
+  font-size: globals.$font-size-body3;
+  font-weight: globals.$font-weight-body3;
+  line-height: globals.$font-line-height-body3;
+  letter-spacing: globals.$font-letter-spacing-body3;
+}

@@ -1,0 +1,26 @@
+$font-path-roboto-mono: "../public/assets/fonts/roboto-mono" !default;
+
+@mixin roboto-mono-font($type, $weight, $style: normal) {
+  @font-face {
+    font-family: "Roboto Mono";
+    src: url("#{$font-path-roboto-mono}/RobotoMono-#{$type}.woff2")
+        format("woff2"),
+      url("#{$font-path-roboto-mono}/RobotoMono-#{$type}.woff") format("woff"),
+      url("#{$font-path-roboto-mono}/RobotoMono-#{$type}.ttf")
+        format("truetype");
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@mixin roboto-mono-font-pair($type, $weight) {
+  @include roboto-mono-font($type, $weight);
+}
+
+@include roboto-mono-font-pair(Light, 300);
+
+@include roboto-mono-font-pair(Regular, 400);
+
+@include roboto-mono-font-pair(Medium, 500);
+
+@include roboto-mono-font-pair(Bold, 700);
