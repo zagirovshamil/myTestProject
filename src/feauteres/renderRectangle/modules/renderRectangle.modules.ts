@@ -1,4 +1,5 @@
 import { VideoPlayerProps } from "../../../pages";
+import { ApiResponse } from "../../../shared";
 
 
 export interface IEvent {
@@ -35,6 +36,6 @@ export interface IVideoPlayerProps {
 
 
 export interface IRenderRectangleProps {
-    data: Zone[];
+    data: ApiResponse;
     currentTime: number;
 }

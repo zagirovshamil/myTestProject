@@ -27,11 +27,7 @@ export const App = () => {
         data={data}
         timestamp={timestamp}
       />
-      <СustomButton
-        data={data}
-        setTimestamp={setTimestamp}
-        timestamp={timestamp}
-      />
+      <СustomButton data={data} setTimestamp={setTimestamp} />
     </>
   );
 };

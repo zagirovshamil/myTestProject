@@ -1,22 +1,21 @@
 import { FC } from "react";
-import { IRenderRectangleProps, Zone } from "./modules";
+import { IRenderRectangleProps } from "./modules";
+import { IAnalysisData } from "../../shared";
 
 export const RenderRectangle: FC<IRenderRectangleProps> = ({
   data,
   currentTime,
 }) => {
-  console.log("data", data);
-
   const fixedNum = (num: number) => Math.round(num * 100) / 100;
 
-  const isZoneVisible = (data: Zone): boolean => {
+  const isZoneVisible = (data: IAnalysisData): boolean => {
     return (
       fixedNum(currentTime) >= fixedNum(data.timestamp) &&
       fixedNum(currentTime) <=
         fixedNum(data.timestamp) + fixedNum(data.duration)
     );
   };
-  return data.data.map((zone: Zone, index: number) => {
+  return data.data.map((zone: IAnalysisData, index: number) => {
     if (isZoneVisible(zone)) {
       return (
         <div

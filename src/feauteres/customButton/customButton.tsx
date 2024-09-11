@@ -4,19 +4,15 @@ import { CustomButtonProps } from "./customButton.modules/customButton.modules";
 import { Button } from "@mui/material";
 import { DataItem } from "../../shared";
 
-export const СustomButton: FC<CustomButtonProps> = ({
-  data,
-  setTimestamp,
-  timestamp,
-}) => {
+export const СustomButton: FC<CustomButtonProps> = ({ data, setTimestamp }) => {
   return (
     <>
       {data?.data.map((el: DataItem) => {
         const date = new Date(el.timestamp);
-        const minutes = Math.floor(date / 60);
+        const minutes = Math.floor(date.valueOf() / 60);
         const seconds = Math.floor(date.getTime() - 60 * minutes);
         const milliseconds: number =
-          (el.timestamp - minutes * 60 - seconds).toFixed(3) * 1000;
+          +(Number(el.timestamp) - minutes * 60 - seconds).toFixed(3) * 1000;
 
         return (
           <div key={el.timestamp}>
